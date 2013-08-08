@@ -4,4 +4,10 @@ if [ ! -f ~/bin/composer.phar ]; then
   cd ~/bin
   curl -sS https://getcomposer.org/installer | php
 fi
+
+while [ ! -x composer.json -a `pwd` != '/' ]; do
+ cd ..
+done
+
 php-cli ~/bin/composer.phar $@
+

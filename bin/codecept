@@ -3,4 +3,9 @@ if [ ! -f ~/bin/codecept.phar ]; then
   [ ! -d ~/bin ] && mkdir ~/bin
   curl -sSo ~/bin/codecept.phar http://codeception.com/codecept.phar
 fi
+
+while [ ! -x codeception.yml -a `pwd` != '/' ]; do
+ cd ..
+done
+
 php-cli ~/bin/codecept.phar $@

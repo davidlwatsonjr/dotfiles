@@ -4,8 +4,13 @@ if [ ! -f ~/bin/codecept.phar ]; then
   curl -sSo ~/bin/codecept.phar http://codeception.com/codecept.phar
 fi
 
-while [ ! -r codeception.yml -a `pwd` != '/' ]; do
- cd ..
+curDir=`pwd`
+while [ ! -r codeception.yml ]; do
+  cd ..
+  if [ `pwd` == '/' ]; then
+    cd $curDir
+    break
+  fi
 done
 
 php-cli ~/bin/codecept.phar $@

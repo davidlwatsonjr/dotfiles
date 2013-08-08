@@ -13,4 +13,5 @@ while [ ! -r codeception.yml ]; do
   fi
 done
 
-php-cli ~/bin/codecept.phar $@
+php ~/bin/codecept.phar $@
+

@@ -14,5 +14,5 @@ while [ ! -r composer.json  ]; do
   fi
 done
 
-php-cli ~/bin/composer.phar $@
+php ~/bin/composer.phar $@
 

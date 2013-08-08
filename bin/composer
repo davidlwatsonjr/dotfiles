@@ -5,7 +5,7 @@ if [ ! -f ~/bin/composer.phar ]; then
   curl -sS https://getcomposer.org/installer | php
 fi
 
-while [ ! -x composer.json -a `pwd` != '/' ]; do
+while [ ! -r composer.json -a `pwd` != '/' ]; do
  cd ..
 done
 

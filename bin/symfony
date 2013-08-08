@@ -1,0 +1,13 @@
+#!/usr/bin/sh
+
+curDir=`pwd`
+
+while [ `pwd` != '/' ]; do
+ if [ -x `pwd`/app/console ]; then
+  eval "`pwd`/app/console $@"
+  break
+ fi
+ cd ..
+done
+
+cd $curDir

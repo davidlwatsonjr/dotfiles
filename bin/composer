@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ ! -f ~/bin/composer.phar ]; then
+  [ ! -d ~/bin ] && mkdir ~/bin
+  cd ~/bin
+  curl -sS https://getcomposer.org/installer | php
+fi
+php-cli ~/bin/composer.phar $@

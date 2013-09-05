@@ -93,4 +93,6 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+
+  autocmd FileType css,javascript autocmd BufWritePre :%s/\s\+$//e
 endif

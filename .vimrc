@@ -40,6 +40,11 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+" Expand tabs automatically
+set expandtab
+" Autoindent... the smart way
+set autoindent
+set smartindent
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list

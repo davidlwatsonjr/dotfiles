@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ ! -f /usr/local/bin/crew ]; then
+  wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
+fi
+
+/usr/local/bin/crew $@
+

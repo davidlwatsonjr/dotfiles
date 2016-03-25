@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ ! -f /usr/local/bin/crouton ]; then
+  if [! -d /usr/local/bin ]; then
+    sudo mkdir -p /usr/local/bin
+  fi
+  sudo wget https://goo.gl/fd3zc -O /usr/local/bin/crouton
+  sudo chmod 755 /usr/local/bin/crouton
+fi
+
+sudo /usr/local/bin/crouton $@
+

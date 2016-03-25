@@ -26,8 +26,8 @@ for option in autocd globstar; do
 done
 
 # pretty git
-source ~/git-completion.bash
-source ~/git-prompt.sh
+source ~/init/git-completion.bash
+source ~/init/git-prompt.sh
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh

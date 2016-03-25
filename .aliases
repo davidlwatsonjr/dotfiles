@@ -115,3 +115,8 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
+# ChromeOS bin aliases because we can't just run it without sh
+alias crouton="sh ~/bin/crouton"
+alias crew="sh ~/bin/crew"
+

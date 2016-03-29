@@ -37,3 +37,6 @@ source ~/init/git-prompt.sh
 
 # This loads nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# Add tab completion for nvm
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
